@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:NeXTs/Clusterize.js.git"
+    "url": "git@github.com:asuntskel/Clusterize.js.git"
   },
   "keywords": [
     "large",
@@ -22,7 +22,7 @@
   "author": "Denis Lukov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NeXTs/Clusterize.js/issues"
+    "url": "https://github.com/asuntskel/Clusterize.js/issues"
   },
-  "homepage": "https://github.com/NeXTs/Clusterize.js"
+  "homepage": "https://github.com/asuntskel/Clusterize.js"
 }
