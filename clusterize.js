@@ -196,10 +196,11 @@
     // get current cluster number
     getClusterNum: function (rows) {
       var opts = this.options;
-      opts.scroll_top = this.scroll_elem.scrollTop;
+      // line below : https://github.com/NeXTs/Clusterize.js/pull/158
+      opts.scroll_top = this.scroll_elem.scrollTop - this.content_elem.offsetTop;
       var cluster_divider = opts.cluster_height - opts.block_height;
-      var current_cluster = Math.floor(opts.scroll_top / cluster_divider);
-      var max_cluster = Math.floor((rows.length * opts.item_height) / cluster_divider);
+      var current_cluster = Math.floor(opts.scroll_top / cluster_divider) || 0;
+      var max_cluster = Math.floor((rows.length * opts.item_height) / cluster_divider) || 0;
       return Math.min(current_cluster, max_cluster);
     },
     // generate empty row if no data provided
